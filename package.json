@@ -9,6 +9,13 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*js\"",
     "lint": "tslint -p tsconfig.json"
   },
+  "repository": {
+    "type": "git",
+    "url":"git+https://github.com/carlosmoran97/ps-author-helper",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
   "keywords": [
     "pluralsight",
     "greetings"
